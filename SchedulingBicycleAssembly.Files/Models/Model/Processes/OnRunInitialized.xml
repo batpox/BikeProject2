@@ -2,7 +2,7 @@
   <Process Name="OnRunInitialized" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnRunInitialized" BeginStepID="2" Category="_Initialization" Description="Initialize ManufacturingOrders table, then iterate through each Materials row and its associated MaterialLots row to sum total quantity involved. If it’s a ManufacturingMaterial then create that quantity of MfgOrders and send to Stock. Otherwise create that quantity of PurchaseOrders and send to Receiving.">
     <Properties />
     <Steps>
-      <Step Type="Search" Name="ManufacturingOrdersOutput" Description="Search all rows in Manufacturing Orders table to add row number to each row." Color="76923c" ID="2">
+      <Step Type="Search" Name="ManufacturingOrdersOutput" Description="Search all rows in Manufacturing Orders table to add row number to each row." Color="d7e3bc" ID="2">
         <Properties>
           <Property Name="CollectionType">TableRows</Property>
           <Property Name="EntityType">DefaultEntity</Property>
