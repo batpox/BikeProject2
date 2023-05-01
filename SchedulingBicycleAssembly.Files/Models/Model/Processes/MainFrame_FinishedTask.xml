@@ -32,7 +32,7 @@
         </Properties>
         <Exit Name="Exit" Type="Primary" NextID="4" />
       </Step>
-      <Step Type="Destroy" Name="AssociatedObject" ID="4">
+      <Step Type="Destroy" Name="AssociatedObject" Color="f00000" ID="4">
         <Properties />
       </Step>
       <Step Type="Search" Name="BillOfMaterials" ID="5">

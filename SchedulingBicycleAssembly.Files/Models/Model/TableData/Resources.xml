@@ -165,8 +165,8 @@
     <Properties>
       <Property Name="ResourceName">Shape1</Property>
       <Property Name="Description">Shape1</Property>
-      <Property Name="XLocation">1.25</Property>
-      <Property Name="ZLocation">-45</Property>
+      <Property Name="XLocation">10.5</Property>
+      <Property Name="ZLocation">-46.25</Property>
       <Property Name="Area">Component Manufacturing</Property>
       <Property Name="Workcell">Shape</Property>
       <Property Name="ObjectType">ComponentManufacturingServer</Property>
@@ -177,8 +177,8 @@
     <Properties>
       <Property Name="ResourceName">Shape2</Property>
       <Property Name="Description">Shape2</Property>
-      <Property Name="XLocation">1.26529295876109</Property>
-      <Property Name="ZLocation">-38.3746396961531</Property>
+      <Property Name="XLocation">10.5152929587611</Property>
+      <Property Name="ZLocation">-39.6246396961531</Property>
       <Property Name="Area">Component Manufacturing</Property>
       <Property Name="Workcell">Shape</Property>
       <Property Name="ObjectType">ComponentManufacturingServer</Property>

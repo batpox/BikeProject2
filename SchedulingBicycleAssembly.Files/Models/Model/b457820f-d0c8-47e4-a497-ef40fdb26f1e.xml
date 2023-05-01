@@ -3447,9 +3447,9 @@
         </AttachedObjects>
       </Graphics>
     </Fixed>
-    <Fixed Name="Shape1" Type="ComponentManufacturingServer" Location="1.25 0 -45" YawDeg="90" Size="1.00081819295883 0.711200028657913 1.40717804431915" Scope="Public">
+    <Fixed Name="Shape1" Type="ComponentManufacturingServer" Location="10.5 0 -46.25" YawDeg="90" Size="1.00081819295883 0.711200028657913 1.40717804431915" Scope="Public">
       <AssociatedNodes>
-        <Node Name="Input@Shape1" Type="BasicNode" Location="-0.25 0 -45" YawDeg="90" Scope="Public" RotationChangesLocation="False">
+        <Node Name="Input@Shape1" Type="BasicNode" Location="9 0 -46.25" YawDeg="90" Scope="Public" RotationChangesLocation="False">
           <Properties>
             <Property Name="ReportStatistics">False</Property>
             <Property Name="InitialCost" Units="USD">0.0</Property>
@@ -3464,7 +3464,7 @@
           </Properties>
           <Graphics ExternallyVisible="True" />
         </Node>
-        <Node Name="Output@Shape1" Type="TransferNode" Location="2.75 0 -45" YawDeg="90" Scope="Public" RotationChangesLocation="False">
+        <Node Name="Output@Shape1" Type="TransferNode" Location="12 0 -46.25" YawDeg="90" Scope="Public" RotationChangesLocation="False">
           <Properties>
             <Property Name="ReportStatistics">False</Property>
             <Property Name="InitialCost" Units="USD">0.0</Property>
@@ -3670,28 +3670,28 @@
         <AttachedObjects IndexList="51 52 53">
           <Queue Queue="InputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="0.25 0 -44.5" />
-              <Point Location="-2.75 0 -44.5" />
+              <Point Location="9.5 0 -45.75" />
+              <Point Location="6.5 0 -45.75" />
             </Points>
           </Queue>
           <Queue Queue="OutputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="2.25 0 -44.5" />
-              <Point Location="5.25 0 -44.5" />
+              <Point Location="11.5 0 -45.75" />
+              <Point Location="14.5 0 -45.75" />
             </Points>
           </Queue>
           <Queue Queue="Processing.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="0.25 0 -46" />
-              <Point Location="2.25 0 -46" />
+              <Point Location="9.5 0 -47.25" />
+              <Point Location="11.5 0 -47.25" />
             </Points>
           </Queue>
         </AttachedObjects>
       </Graphics>
     </Fixed>
-    <Fixed Name="Shape2" Type="ComponentManufacturingServer" Location="1.26529295876109 0 -38.3746396961531" YawDeg="90" Size="1.00081819295883 0.711200028657913 1.40717804431915" Scope="Public">
+    <Fixed Name="Shape2" Type="ComponentManufacturingServer" Location="10.5152929587611 0 -39.6246396961531" YawDeg="90" Size="1.00081819295883 0.711200028657913 1.40717804431915" Scope="Public">
       <AssociatedNodes>
-        <Node Name="Input@Shape2" Type="BasicNode" Location="-0.23470704123891 0 -38.3746396961531" YawDeg="90" Scope="Public" RotationChangesLocation="False">
+        <Node Name="Input@Shape2" Type="BasicNode" Location="9.01529295876109 0 -39.6246396961531" YawDeg="90" Scope="Public" RotationChangesLocation="False">
           <Properties>
             <Property Name="ReportStatistics">False</Property>
             <Property Name="InitialCost" Units="USD">0.0</Property>
@@ -3706,7 +3706,7 @@
           </Properties>
           <Graphics ExternallyVisible="True" />
         </Node>
-        <Node Name="Output@Shape2" Type="TransferNode" Location="2.76529295876109 0 -38.3746396961531" YawDeg="90" Scope="Public" RotationChangesLocation="False">
+        <Node Name="Output@Shape2" Type="TransferNode" Location="12.0152929587611 0 -39.6246396961531" YawDeg="90" Scope="Public" RotationChangesLocation="False">
           <Properties>
             <Property Name="ReportStatistics">False</Property>
             <Property Name="InitialCost" Units="USD">0.0</Property>
@@ -3912,20 +3912,20 @@
         <AttachedObjects IndexList="54 55 56">
           <Queue Queue="InputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="0.26529295876109 0 -37.8746396961531" />
-              <Point Location="-2.73470704123891 0 -37.8746396961531" />
+              <Point Location="9.51529295876109 0 -39.1246396961531" />
+              <Point Location="6.51529295876109 0 -39.1246396961531" />
             </Points>
           </Queue>
           <Queue Queue="OutputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="2.26529295876109 0 -37.8746396961531" />
-              <Point Location="5.26529295876109 0 -37.8746396961531" />
+              <Point Location="11.5152929587611 0 -39.1246396961531" />
+              <Point Location="14.5152929587611 0 -39.1246396961531" />
             </Points>
           </Queue>
           <Queue Queue="Processing.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
             <Points>
-              <Point Location="0.26529295876109 0 -39.3746396961531" />
-              <Point Location="2.26529295876109 0 -39.3746396961531" />
+              <Point Location="9.51529295876109 0 -40.6246396961531" />
+              <Point Location="11.5152929587611 0 -40.6246396961531" />
             </Points>
           </Queue>
         </AttachedObjects>

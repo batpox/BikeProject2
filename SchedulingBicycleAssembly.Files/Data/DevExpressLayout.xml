@@ -12,6 +12,7 @@
   <property name="EnableStickySplitters">Default</property>
   <property name="CustomResizeZoneThickness">0</property>
   <property name="Style">Default</property>
+  <property name="FloatDocumentsAlwaysOnTop">Default</property>
   <property name="FloatingDocumentContainer">Default</property>
   <property name="LoadingIndicatorProperties" isnull="true" iskey="true" />
   <property name="DocumentSelectorProperties" isnull="true" iskey="true">
@@ -182,11 +183,11 @@
         <property name="UnitValue">1</property>
         <property name="UnitType">Star</property>
       </property>
-      <property name="Name">58678836</property>
+      <property name="Name">DockingContainer0</property>
       <property name="TypeName">DockingContainer</property>
     </property>
     <property name="Item13" isnull="true" iskey="true">
-      <property name="Parent">58678836</property>
+      <property name="Parent">DockingContainer0</property>
       <property name="Element">DocumentGroup0</property>
       <property name="Orientation">Horizontal</property>
       <property name="Index">0</property>
@@ -194,12 +195,12 @@
         <property name="UnitValue">1</property>
         <property name="UnitType">Star</property>
       </property>
-      <property name="Name">58347480</property>
+      <property name="Name">DockingContainer1</property>
       <property name="TypeName">DockingContainer</property>
     </property>
     <property name="Item14" isnull="true" iskey="true">
       <property name="Properties" isnull="true" iskey="true" />
-      <property name="Length">1148</property>
+      <property name="Length">991</property>
       <property name="Index">0</property>
       <property name="Name">DocumentGroup0</property>
       <property name="TypeName">DocumentGroup</property>
