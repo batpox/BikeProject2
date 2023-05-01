@@ -1,0 +1,27 @@
+<Fragment>
+  <Process Name="OnRepaired" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Resume" Name="Processing" ID="2">
+        <Properties>
+          <Property Name="ResumeType">ObjectMovement</Property>
+          <Property Name="ObjectType">ParentObject</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Fire" Name="RepairedEvent" ID="3">
+        <Properties>
+          <Property Name="EventName">Repaired</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Execute" Name="RepairedAddOnProcess" ID="4">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>RepairedAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

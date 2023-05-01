@@ -1,0 +1,263 @@
+<Fragment>
+  <Compatibility ParseElementFunctionsInExpressionsLast="True" ParseNonEntityAssociatedObjectForPropertyReference="True" AllowInteractiveEntryOfNonStandardElementNames="False" ParsePropertiesForObjectTypeForAutoCreatedObjectsFirst="False" />
+  <Lists />
+  <PropertyDefinitions>
+    <Categories>
+      <Category Name="Process Logic" Description="Process Logic" />
+      <Category Name="Process Logic/Other Processing Options" Description="Process Logic/Other Processing Options" InitiallyExpanded="False" />
+      <Category Name="Buffer Logic" Description="Buffer Logic" InitiallyExpanded="False" />
+      <Category Name="Buffer Logic/Input Buffer" Description="Input Buffer Logic" />
+      <Category Name="Buffer Logic/Input Buffer/Balking &amp; Reneging Options" Description="Input Buffer Balking &amp; Reneging Options" InitiallyExpanded="False" />
+      <Category Name="Buffer Logic/Output Buffer" Description="Output Buffer Logic" />
+      <Category Name="Buffer Logic/Output Buffer/Balking &amp; Reneging Options" Description="Output Buffer Balking &amp; Reneging Options" InitiallyExpanded="False" />
+      <Category Name="Reliability Logic" Description="Reliability Logic" InitiallyExpanded="False" />
+      <Category Name="Table Row Referencing" Description="Optional Table Row Reference Actions" InitiallyExpanded="False" />
+      <Category Name="Table Row Referencing/Before Processing" Description="Table Row Reference Actions Before Processing" InitiallyExpanded="False" />
+      <Category Name="State Assignments" Description="Optional State Assignments" InitiallyExpanded="False" />
+      <Category Name="Secondary Resources" Description="Optional Secondary Resource Requirements" InitiallyExpanded="False" />
+      <Category Name="Secondary Resources/For Processing" Description="Secondary Resources/For Processing" />
+      <Category Name="Secondary Resources/For Processing/Required Quantity &amp; Constraints" Description="Secondary Resources/For Processing/Required Quantity &amp; Constraints" InitiallyExpanded="False" />
+      <Category Name="Secondary Resources/For Processing/Advanced Options" Description="Secondary Resources/For Processing/Advanced Options" InitiallyExpanded="False" />
+      <Category Name="Secondary Resources/Other Resource Seizes" Description="Secondary Resources/Other Resource Seizes" InitiallyExpanded="False" />
+      <Category Name="Secondary Resources/Other Resource Releases" Description="Secondary Resources/Other Resource Releases" InitiallyExpanded="False" />
+      <Category Name="Financials" Description="Financials" InitiallyExpanded="False" />
+      <Category Name="Financials/Buffer Costs" Description="Buffer Costs" InitiallyExpanded="False" />
+      <Category Name="Financials/Resource Costs" Description="Resource Costs" InitiallyExpanded="False" />
+      <Category Name="Add-On Process Triggers" Description="Add-On Process Triggers" InitiallyExpanded="False" />
+      <Category Name="Advanced Options" Description="Advanced Options" InitiallyExpanded="False" />
+      <Category Name="Advanced Options/Deprecated Properties" Description="Advanced Options/Deprecated Properties" InitiallyExpanded="False" />
+    </Categories>
+    <Overrides>
+      <Override Name="ResourceIdleCostRate" DefaultValue="Resources.CostRate" />
+      <Override Name="ResourceUsageCostRate" DefaultValue="Resources.CostRate" />
+      <Override Name="LogResourceUsage" DefaultValue="True" />
+      <Override Name="DisplayCategory" DefaultValue="Component Manufacturing" />
+      <Override Name="CapacityType" DefaultValue="WorkSchedule" />
+      <Override Name="InitialWorkSchedule" DefaultValue="Resources.WorkSchedule" />
+      <Override Name="WorkDayExceptions" DefaultValue="0 Rows" />
+      <Override Name="WorkPeriodExceptions" DefaultValue="0 Rows" />
+      <Override Name="RankingExpression" DefaultValue="Entity.Priority" />
+      <Override Name="CurrentSizeIndex" DefaultValue="Server.ResourceState" />
+      <Override Name="TransferOutConstraintsType" DefaultValue="Disable" />
+      <Override Name="ExpectedSetupTimeExpression" DefaultValue="SequenceDependentSetupMatrix.ExpectedSetupTime(Server, Entity)" />
+      <Override Name="ExpectedOperationTimeExpression" DefaultValue="Server.ProcessingTime" />
+      <Override Name="ProcessType" DefaultValue="Task Sequence" />
+      <Override Name="ProcessingTasks" DefaultValue="6 Rows">
+        <DefaultTuples>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="10.1" />
+            <DefaultTupleEntry Name="TaskName" Value="Consume" />
+            <DefaultTupleEntry Name="TaskBranchType" Value="Conditional" />
+            <DefaultTupleEntry Name="TaskConditionOrProbability" Value="ManufacturingOrders.OrderStatus == List.OrderStatus.New || Math.If(WorkInProcess.AvailableRowCount &gt; 0, WorkInProcess[1].CurrentRouteNumber != Routings.RouteNumber, True)" />
+            <DefaultTupleEntry Name="TaskProcessingTime.Units" Value="Hours" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsActionType" Value="BillOfMaterials.MaterialUse" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsMaterialName" Value="BillOfMaterials.ComponentMaterial" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsQuantity" Value="Math.If( BillOfMaterials.MaterialUse == Enum.MaterialActionType.Consume,  BillOfMaterials.RequiredQuantity * ManufacturingOrders.Quantity, 0.0)" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsLotID" Value="BillOfMaterials.RequiredLotId" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="20.1" />
+            <DefaultTupleEntry Name="TaskName" Value="Setup" />
+            <DefaultTupleEntry Name="TaskProcessType" Value="Sequence Dependent Setup" />
+            <DefaultTupleEntry Name="TaskChangeoverLogicName" Value="SequenceDependentSetupMatrix" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="30.1" />
+            <DefaultTupleEntry Name="TaskName" Value="Process" />
+            <DefaultTupleEntry Name="TaskProcessingTime" Value="Random.Triangular(.8, 1, 1.2) * ManufacturingOrders.Quantity * Routings.ProcessTime" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="10.2" />
+            <DefaultTupleEntry Name="TaskName" Value="SetupWIP" />
+            <DefaultTupleEntry Name="TaskBranchType" Value="Conditional" />
+            <DefaultTupleEntry Name="TaskConditionOrProbability" Value="ManufacturingOrders.OrderStatus == List.OrderStatus.WIP &amp;&amp; WorkInProcess.AvailableRowCount &gt; 0 &amp;&amp; WorkInProcess[1].CurrentRouteNumber == Routings.RouteNumber" />
+            <DefaultTupleEntry Name="TaskProcessType" Value="Sequence Dependent Setup" />
+            <DefaultTupleEntry Name="TaskChangeoverLogicName" Value="SequenceDependentSetupMatrix" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="20.2" />
+            <DefaultTupleEntry Name="TaskName" Value="ProcessWIP" />
+            <DefaultTupleEntry Name="TaskProcessingTime" Value="Random.Triangular(.8, 1, 1.2) * Math.If( ManufacturingOrders.Quantity &gt; WorkInProcess[1].CompletedQuantity, ManufacturingOrders.Quantity - WorkInProcess[1].CompletedQuantity, 0.0) * Routings.ProcessTime" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="TaskSequenceNumber" Value="40" />
+            <DefaultTupleEntry Name="TaskName" Value="Produce" />
+            <DefaultTupleEntry Name="TaskProcessingTime.Units" Value="Hours" />
+            <DefaultTupleEntry Name="TaskResourceRequirementsOffShiftRule" Value="Finish Work Already Started" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsActionType" Value="BillOfMaterials.MaterialUse" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsMaterialName" Value="BillOfMaterials.ComponentMaterial" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsQuantity" Value="Math.If( BillOfMaterials.MaterialUse == Enum.MaterialActionType.Produce,  BillOfMaterials.RequiredQuantity * ManufacturingOrders.Quantity, 0.0)" />
+            <DefaultTupleEntry Name="TaskMaterialRequirementsLotID" Value="BillOfMaterials.RequiredLotId" />
+          </DefaultTuple>
+        </DefaultTuples>
+      </Override>
+      <Override Name="ProcessingTaskMaterialsReferencedTableName" DefaultValue="BillOfMaterials" />
+      <Override Name="InputBufferCapacity" DefaultValue="0" />
+      <Override Name="InputBufferRenegeTriggers" DefaultValue="0 Rows" />
+      <Override Name="OutputBufferRenegeTriggers" DefaultValue="0 Rows" />
+      <Override Name="TableRowReferenceBeforeProcessingActionType" DefaultValue="Add New Row" />
+      <Override Name="TableRowReferenceBeforeProcessingTableName" DefaultValue="ManufacturingOrdersOutput" />
+      <Override Name="AssignmentsOnEntering" DefaultValue="0 Rows" />
+      <Override Name="AssignmentsBeforeProcessing" DefaultValue="4 Rows">
+        <DefaultTuples>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingStateVariableName" Value="ManufacturingOrdersOutput.ScheduledResource" />
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingNewValue" Value="Resources.ResourceName.Object.Name" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingStateVariableName" Value="ManufacturingOrdersOutput.ScheduledStartTime" />
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingNewValue" Value="TimeNow" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingStateVariableName" Value="ManufacturingOrdersOutput.ScheduledQuantity" />
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingNewValue" Value="ManufacturingOrders.Quantity" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingStateVariableName" Value="Resources.ChangeoverEfficiency" />
+            <DefaultTupleEntry Name="AssignmentsBeforeProcessingNewValue" Value="Math.If(ManufacturingOrders.OrderStatus == List.OrderStatus.WIP &amp;&amp; WorkInProcess.AvailableRowCount &gt; 0 &amp;&amp; WorkInProcess[1].CurrentRouteNumber == Routings.RouteNumber, Math.If( WorkInProcess[1].FractionOfSetupCompleted &lt;= 1, 1 - WorkInProcess[1].FractionOfSetupCompleted, 1), 1)" />
+          </DefaultTuple>
+        </DefaultTuples>
+      </Override>
+      <Override Name="AssignmentsAfterProcessing" DefaultValue="2 Rows">
+        <DefaultTuples>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsAfterProcessingStateVariableName" Value="ManufacturingOrdersOutput.ScheduledEndTime" />
+            <DefaultTupleEntry Name="AssignmentsAfterProcessingNewValue" Value="TimeNow" />
+          </DefaultTuple>
+          <DefaultTuple>
+            <DefaultTupleEntry Name="AssignmentsAfterProcessingStateVariableName" Value="Resources.ChangeoverEfficiency" />
+            <DefaultTupleEntry Name="AssignmentsAfterProcessingNewValue" Value="1.0" />
+          </DefaultTuple>
+        </DefaultTuples>
+      </Override>
+      <Override Name="AssignmentsBeforeExiting" DefaultValue="0 Rows" />
+      <Override Name="AssignmentsOnBalking" DefaultValue="0 Rows" />
+      <Override Name="AssignmentsOnReneging" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceForProcessingRequestMove" DefaultValue="To Node" />
+      <Override Name="SecondaryResourceForProcessingDestinationNode" DefaultValue="Server.Input" />
+      <Override Name="SecondaryResourceSeizesOnEntering" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceSeizesBeforeProcessing" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceSeizesAfterProcessing" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceReleasesOnEntering" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceReleasesBeforeProcessing" DefaultValue="0 Rows" />
+      <Override Name="SecondaryResourceReleasesAfterProcessing" DefaultValue="0 Rows" />
+    </Overrides>
+  </PropertyDefinitions>
+  <States />
+  <Events />
+  <Elements />
+  <Processes />
+  <Tokens />
+  <External>
+    <TransferPoints />
+    <TransferPointInitialValuesOverrides>
+      <TransferPointInitialValuesOverride Name="Input">
+        <InitialValues>
+          <InitialValue Name="ReportStatistics" Value="False" />
+          <InitialValue Name="WorkDayExceptions" Value="0 Rows" />
+          <InitialValue Name="WorkPeriodExceptions" Value="0 Rows" />
+          <InitialValue Name="SequenceExpectedOperationTime" Value="Math.If(Entity.CanTransferInAndOutOfObjects, Node.AssociatedObject.Server.ProcessingTime, 0.0)" />
+          <InitialValue Name="AssignmentsOnEntering" Value="0 Rows" />
+          <InitialValue Name="TalliesOnEntering" Value="0 Rows" />
+          <InitialValue Name="TalliesOnExited" Value="0 Rows" />
+        </InitialValues>
+      </TransferPointInitialValuesOverride>
+      <TransferPointInitialValuesOverride Name="Output">
+        <InitialValues>
+          <InitialValue Name="ReportStatistics" Value="False" />
+          <InitialValue Name="WorkDayExceptions" Value="0 Rows" />
+          <InitialValue Name="WorkPeriodExceptions" Value="0 Rows" />
+          <InitialValue Name="EntryExemptionCondition" Value="TransferNode.RideOnTransporter &amp;&amp; !Entity.Is.Transporter" />
+          <InitialValue Name="DestinationType" Value="BySequence" />
+          <InitialValue Name="RoutingOutRequiredMaterials" Value="0 Rows" />
+          <InitialValue Name="AssignmentsOnEntering" Value="0 Rows" />
+          <InitialValue Name="TalliesOnEntering" Value="0 Rows" />
+          <InitialValue Name="TalliesOnExited" Value="0 Rows" />
+        </InitialValues>
+      </TransferPointInitialValuesOverride>
+    </TransferPointInitialValuesOverrides>
+    <Graphics>
+      <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+        <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+      </SymbolInstance>
+      <Queue Queue="InputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
+        <Points>
+          <Point Location="-1 0 0.5" />
+          <Point Location="-4 0 0.5" />
+        </Points>
+      </Queue>
+      <Queue Queue="OutputBuffer.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
+        <Points>
+          <Point Location="1 0 0.5" />
+          <Point Location="4 0 0.5" />
+        </Points>
+      </Queue>
+      <Queue Queue="Processing.Contents" ExternallyVisible="True" RotationChangesLocation="False" RotationChangesOrientation="False">
+        <Points>
+          <Point Location="-1 0 -1" />
+          <Point Location="1 0 -1" />
+        </Points>
+      </Queue>
+      <DefaultAdditionalSymbols>
+        <DefaultAdditionalSymbol Index="0">
+          <SymbolInstance Center="0 0 0" ExternallyVisible="True">
+            <SymbolRef Id="[UseExternalSymbol]" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="1">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="2">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="3">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="4">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="5">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="6">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="7">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+        <DefaultAdditionalSymbol Index="8">
+          <SymbolInstance Center="0 0 0" XScale="0.99999999999999789" YScale="1.0000000000000042" ZScale="1.0000000000000007" ExternallyVisible="True">
+            <SymbolRef Id="b389d627-bc19-49a9-b24d-d5d2071dbd2b" />
+          </SymbolInstance>
+        </DefaultAdditionalSymbol>
+      </DefaultAdditionalSymbols>
+    </Graphics>
+  </External>
+  <SaveHistories>
+    <SaveHistory SavedDateTime="2022-04-21T20:11:47" ProductVersion="14.238.0.0" Edition="Internal" />
+    <SaveHistory SavedDateTime="2022-06-24T12:26:50" ProductVersion="15.241.0.0" Edition="Internal" />
+    <SaveHistory SavedDateTime="2023-04-30T18:42:34" ProductVersion="15.251.31171.0" Edition="Professional" />
+  </SaveHistories>
+  <Graphics>
+    <AnimationSetup MinimumNumberOfFramesToDisplayIdleAnimation="10" />
+  </Graphics>
+</Fragment>

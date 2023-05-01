@@ -1,0 +1,158 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="Resource">MainFrame1</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">MainFrame2</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Power1</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Power2</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Final1</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Final2</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Test1</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Test2</Property>
+      <Property Name="Workers">Assemblers1stShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">MainFrame1</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">MainFrame2</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Power1</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Power2</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Final1</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Final2</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Test1</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Test2</Property>
+      <Property Name="Workers">Assemblers2ndShift</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Cut1</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Cut2</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Shape1</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Shape2</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Paint1</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Paint2</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Weld1</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Weld2</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Machine1</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="Resource">Machine2</Property>
+      <Property Name="Workers">Operators</Property>
+    </Properties>
+  </Row>
+</Fragment>

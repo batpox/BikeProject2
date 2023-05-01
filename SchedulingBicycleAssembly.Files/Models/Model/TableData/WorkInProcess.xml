@@ -1,0 +1,28 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="OrderId">Order_FRM_1</Property>
+      <Property Name="CurrentRouteNumber">20</Property>
+      <Property Name="CurrentResource">Cut1</Property>
+      <Property Name="CompletedQuantity">5</Property>
+      <Property Name="AccruedCost" Units="USD">100</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="OrderId">Order_FRM_2</Property>
+      <Property Name="CurrentRouteNumber">30</Property>
+      <Property Name="CurrentResource">Machine2</Property>
+      <Property Name="CompletedQuantity">10</Property>
+      <Property Name="AccruedCost" Units="USD">200</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="OrderId">Order_HB_1</Property>
+      <Property Name="CurrentRouteNumber">20</Property>
+      <Property Name="CurrentResource">Shape2</Property>
+      <Property Name="AccruedCost" Units="USD">300</Property>
+    </Properties>
+  </Row>
+</Fragment>

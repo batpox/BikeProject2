@@ -1,0 +1,51 @@
+<Fragment>
+  <Process Name="OnReachedEnd" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Link.OnReachedEnd" BeginStepID="2">
+    <Properties>
+      <Property Name="TokenActionOnAssociatedObjectDestroyed">EndProcess</Property>
+      <Property Name="TokenActionOnAssociatedObjectTransferRequested">EndProcess</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Decide" Name="IfAccumulating" ExclusionExpression="Math.If(Accumulating, 1, 2)" ID="2">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Accumulating</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="3" />
+        <Exit Name="False" Type="Alternate" NextID="6" />
+      </Step>
+      <Step Type="Disengage" Name="FromLinkPosition" ID="3">
+        <Properties />
+        <Exit Name="Exit" Type="Primary" NextID="6" />
+      </Step>
+      <Step Type="Assign" Name="BeforeExitingAssignments" ID="4">
+        <Properties>
+          <Property Name="Assignments">
+            <Value>AssignmentsBeforeExiting</Value>
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>AssignmentsBeforeExitingStateVariableName</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">AssignmentsBeforeExitingNewValue</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Transfer" Name="FromConveyor" ID="5">
+        <Properties>
+          <Property Name="FromType">EndOfLink</Property>
+        </Properties>
+      </Step>
+      <Step Type="Execute" Name="ReachedEndAddOnProcess" ID="6">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>ReachedEndAddOnProcess</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

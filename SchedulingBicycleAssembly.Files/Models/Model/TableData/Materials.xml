@@ -1,0 +1,299 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>EcoBikeSTDGreen</Value>
+      </Property>
+      <Property Name="MaterialClass">Finished Material</Property>
+      <Property Name="MaterialCost" Units="USD">700</Property>
+      <Property Name="MaterialColor">Green</Property>
+      <Property Name="GanttColor">Green</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic1</Value>
+      </Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>EcoBikeSTDWhite</Value>
+      </Property>
+      <Property Name="MaterialClass">Finished Material</Property>
+      <Property Name="MaterialCost" Units="USD">700</Property>
+      <Property Name="MaterialColor">White</Property>
+      <Property Name="GanttColor">White</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic2</Value>
+      </Property>
+      <Property Name="PictureId">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>EcoBikeEXTGreen</Value>
+      </Property>
+      <Property Name="MaterialClass">Finished Material</Property>
+      <Property Name="MaterialCost" Units="USD">750</Property>
+      <Property Name="MaterialColor">Green</Property>
+      <Property Name="GanttColor">Green</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic3</Value>
+      </Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>EcoBikeEXTWhite</Value>
+      </Property>
+      <Property Name="MaterialClass">Finished Material</Property>
+      <Property Name="MaterialCost" Units="USD">750</Property>
+      <Property Name="MaterialColor">White</Property>
+      <Property Name="GanttColor">White</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic4</Value>
+      </Property>
+      <Property Name="PictureId">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>Frame</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">100</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">DimGray</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic5</Value>
+      </Property>
+      <Property Name="PictureId">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>GreenFinishedFrame</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">120</Property>
+      <Property Name="MaterialColor">Green</Property>
+      <Property Name="GanttColor">Green</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic6</Value>
+      </Property>
+      <Property Name="PictureId">3</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>WhiteFinishedFrame</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">120</Property>
+      <Property Name="MaterialColor">White</Property>
+      <Property Name="GanttColor">White</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic7</Value>
+      </Property>
+      <Property Name="PictureId">4</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>Fork</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">25</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">DimGray</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic8</Value>
+      </Property>
+      <Property Name="PictureId">5</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>GreenFinishedFork</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">30</Property>
+      <Property Name="MaterialColor">Green</Property>
+      <Property Name="GanttColor">Green</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic9</Value>
+      </Property>
+      <Property Name="PictureId">6</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>WhiteFinishedFork</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">30</Property>
+      <Property Name="MaterialColor">White</Property>
+      <Property Name="GanttColor">White</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic10</Value>
+      </Property>
+      <Property Name="PictureId">7</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>HandleBar</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">10</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">DimGray</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic11</Value>
+      </Property>
+      <Property Name="PictureId">8</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>GreenFinishedHandleBar</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">15</Property>
+      <Property Name="MaterialColor">Green</Property>
+      <Property Name="GanttColor">Green</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic12</Value>
+      </Property>
+      <Property Name="PictureId">9</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>WhiteFinishedHandleBar</Value>
+      </Property>
+      <Property Name="MaterialClass">Manufacturing Material</Property>
+      <Property Name="MaterialCost" Units="USD">15</Property>
+      <Property Name="MaterialColor">White</Property>
+      <Property Name="GanttColor">White</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic13</Value>
+      </Property>
+      <Property Name="PictureId">10</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>Seat</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">50</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">Brown</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic14</Value>
+      </Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>BrakeSet</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">30</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">OrangeRed</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic15</Value>
+      </Property>
+      <Property Name="PictureId">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>WheelSet</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">60</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">Bisque</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic16</Value>
+      </Property>
+      <Property Name="PictureId">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>StdBattery</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">120</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">DarkOrange</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic17</Value>
+      </Property>
+      <Property Name="PictureId">3</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>ExtBattery</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">150</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">Orange</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic18</Value>
+      </Property>
+      <Property Name="PictureId">3</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>Motor</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">300</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">YellowGreen</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic19</Value>
+      </Property>
+      <Property Name="PictureId">4</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">
+        <Value>FenderSet</Value>
+      </Property>
+      <Property Name="MaterialClass">Raw Material</Property>
+      <Property Name="MaterialCost" Units="USD">65</Property>
+      <Property Name="MaterialColor">None</Property>
+      <Property Name="GanttColor">Turquoise</Property>
+      <Property Name="MaterialStateStatistic">
+        <Value>StateStatistic20</Value>
+      </Property>
+      <Property Name="PictureId">5</Property>
+    </Properties>
+  </Row>
+</Fragment>

@@ -1,0 +1,35 @@
+<Fragment>
+  <Process Name="FailureOccurrenceLogic" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Fail" Name="Conveyor" ID="2">
+        <Properties>
+          <Property Name="FailureName">
+            <Value>Failure</Value>
+          </Property>
+          <Property Name="TokenWaitAction">WaitUntilOnFailedProcessCompleted</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Delay" Name="TimeToRepair" ID="3">
+        <Properties>
+          <Property Name="DelayTime">TimeToRepair</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Repair" Name="Conveyor" ID="4">
+        <Properties>
+          <Property Name="FailureName">
+            <Value>Failure</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Fire" Name="FailuresTimerResetEvent" ID="5">
+        <Properties>
+          <Property Name="EventName">FailuresTimerReset</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

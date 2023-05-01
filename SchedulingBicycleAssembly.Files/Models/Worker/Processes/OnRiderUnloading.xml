@@ -1,0 +1,32 @@
+<Fragment>
+  <Process Name="OnRiderUnloading" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Transporter.OnRiderUnloading" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Decide" Name="IfWorkerKeptReserved" ID="2">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Capacity.ReservedTo(Entity)&gt;0 &amp;&amp; RideStation.Contents==1</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Assign" Name="PreferredOwner" ID="3">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>PreferredOwner</Value>
+          </Property>
+          <Property Name="NewValue">Entity</Property>
+          <Property Name="Assignments">
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>OnNewSeizeRequest.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">True</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

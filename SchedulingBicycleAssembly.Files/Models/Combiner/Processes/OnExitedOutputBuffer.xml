@@ -1,0 +1,16 @@
+<Fragment>
+  <Process Name="OnExitedOutputBuffer" BeginStepID="2">
+    <Properties>
+      <Property Name="TriggeringEventName">OutputBuffer.Exited</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Execute" Name="ExitedAddOnProcess" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>ExitedAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

@@ -1,0 +1,26 @@
+<Fragment>
+  <Process Name="OnCollisionCleared" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Link.OnCollisionCleared" BeginStepID="3">
+    <Properties />
+    <Steps>
+      <Step Type="Engage" Name="WithLinkPosition" ID="2">
+        <Properties />
+      </Step>
+      <Step Type="Decide" Name="IfAccumulating" ExclusionExpression="Math.If(Accumulating, 1, 2)" ID="3">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Accumulating</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="2" />
+        <Exit Name="False" Type="Alternate" NextID="4" />
+      </Step>
+      <Step Type="Assign" Name="ConveyorMovementRate" ID="4">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>Movement.Rate</Value>
+          </Property>
+          <Property Name="NewValue">Math.Min(Math.If((Entity.NextEntityAheadOnLink!=Nothing)&amp;&amp;(Entity.NetworkDistanceTo.NextEntityAheadOnLink==0.0), Entity.NextEntityAheadOnLink.Movement.Rate, DesiredSpeed), DesiredSpeed)</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

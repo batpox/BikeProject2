@@ -1,0 +1,13 @@
+<Fragment>
+  <ViewInfo>
+    <Facility FollowDistanceRatio="1">
+      <Camera Orientation="Top" Location="0.835134940144521 13.3417898974017 0.655157145894147" Direction="0 -1 -2.22044604925031E-16" Zoom="13.81031429179207" />
+      <ObjectDisplay SnapToGrid="True" Background="ffffff" />
+      <Libraries Width="122">
+        <Library Name="Standard Library" Size="460" Expanded="True" />
+        <Library Name="Flow Library" Size="28" />
+      </Libraries>
+    </Facility>
+    <Process DefaultCategoryExpanded="True" />
+  </ViewInfo>
+</Fragment>

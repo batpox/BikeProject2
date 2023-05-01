@@ -1,0 +1,60 @@
+<Fragment>
+  <Process Name="MainFrame_FinishedTask" BeginStepID="5" Category="MainFrameAdd-On Processes">
+    <Properties>
+      <Property Name="TokenClassName">TaskToken</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Interrupt" Name="MaterialAssembly" Color="9bbb59" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>MaterialAssembly.OnEnteredProcessing</Value>
+          </Property>
+          <Property Name="SelectionRule" RuleGuid="5b3f97f6-189c-450f-884d-8cdb80dc6fe2">
+            <Value>Smallest Value First</Value>
+            <Properties>
+              <Property Name="DynamicSelectionExpression">Candidate.Entity.ID</Property>
+              <Property Name="FilterExpression">Candidate.ModelEntity.MaterialRef == TaskToken.MaterialRef</Property>
+            </Properties>
+          </Property>
+          <Property Name="Limit">Infinity</Property>
+        </Properties>
+        <Exit Name="Interrupted" Type="Alternate" NextID="3" />
+      </Step>
+      <Step Type="Release" Name="Server" ID="3">
+        <Properties>
+          <Property Name="ResourceReleases">
+            <Rows>
+              <Properties>
+                <Property Name="ResourceName">MaterialAssembly</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Destroy" Name="AssociatedObject" ID="4">
+        <Properties />
+      </Step>
+      <Step Type="Search" Name="BillOfMaterials" ID="5">
+        <Properties>
+          <Property Name="CollectionType">TableRows</Property>
+          <Property Name="TableName">BillOfMaterials</Property>
+          <Property Name="SearchType">ForwardSumExpression</Property>
+          <Property Name="Limit">Infinity</Property>
+          <Property Name="CopyOverTableRowReferences">False</Property>
+          <Property Name="SetTableRowConflictResolution">Abort</Property>
+        </Properties>
+        <Exit Name="Found" Type="Alternate" NextID="6" />
+      </Step>
+      <Step Type="Assign" Name="MaterialRef" ID="6">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>TaskToken.MaterialRef</Value>
+          </Property>
+          <Property Name="NewValue">BillOfMaterials.ComponentMaterial</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="2" />
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

@@ -1,0 +1,12 @@
+<Fragment>
+  <Process Name="Allocate" BeginStepID="2" Category="Deprecated Processes">
+    <Properties />
+    <Steps>
+      <Step Type="Allocate" Name="Vehicle" ID="2">
+        <Properties>
+          <Property Name="ResourceType">ParentObject</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

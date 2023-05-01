@@ -1,0 +1,14 @@
+<Fragment>
+  <Process Name="OnEvaluatingRiderAtPickup" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Transporter.OnEvaluatingRiderAtPickup" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Execute" Name="EvaluatingTransportRequestAddOnProcess" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>EvaluatingTransportRequestAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

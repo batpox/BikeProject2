@@ -1,0 +1,139 @@
+<Fragment>
+  <Process Name="OnRunInitialized" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnRunInitialized" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Notify" Name="IfParentInputBufferCapacityIsZero" ExclusionExpression="ParentInputBufferCapacity &gt; 0" ID="2">
+        <Properties>
+          <Property Name="NotificationType">Warning</Property>
+          <Property Name="MessageHeading">"Potential modeling problem detected"</Property>
+          <Property Name="MessageContent">"The parent input buffer capacity of combiner '" + Name + "' is specified as zero. A buffer is required in order to hold the parent entities waiting to have batch members attached."</Property>
+          <Property Name="NotifyCondition">ParentInputBuffer.CurrentCapacity==0</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Notify" Name="IfMemberInputBufferCapacityIsZero" ExclusionExpression="MemberInputBufferCapacity &gt; 0" ID="3">
+        <Properties>
+          <Property Name="NotificationType">Warning</Property>
+          <Property Name="MessageHeading">"Potential modeling problem detected"</Property>
+          <Property Name="MessageContent">"The member input buffer capacity of combiner '" + Name + "' is specified as zero. A buffer is required to hold the member entities waiting to be added to a batch."</Property>
+          <Property Name="NotifyCondition">MemberInputBuffer.CurrentCapacity==0</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Assign" Name="ToEnableFailures" ExclusionExpression="FailureType == List.CombinerFailureType.NoFailures" ID="4">
+        <Properties>
+          <Property Name="Assignments">
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>CalendarTimeBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.CombinerFailureType.CalendarTimeBased</Property>
+              </Properties>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>ProcessingCountBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.CombinerFailureType.ProcessingCountBased</Property>
+              </Properties>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>EventCountBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.CombinerFailureType.EventCountBased</Property>
+              </Properties>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>ProcessingTimeBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.CombinerFailureType.ProcessingTimeBased</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Subscribe" Name="ToFailureEvents" ExclusionExpression="FailureType == List.CombinerFailureType.NoFailures" ID="5">
+        <Properties>
+          <Property Name="EventName">CalendarTimeBasedFailures.Event</Property>
+          <Property Name="ProcessName">
+            <Value>FailureOccurrenceLogic</Value>
+          </Property>
+          <Property Name="Events">
+            <Rows>
+              <Properties>
+                <Property Name="EventsEventName">ProcessingCountBasedFailures.Event</Property>
+                <Property Name="EventsProcessName">
+                  <Value>FailureOccurrenceLogic</Value>
+                </Property>
+              </Properties>
+              <Properties>
+                <Property Name="EventsEventName">EventCountBasedFailures.Event</Property>
+                <Property Name="EventsProcessName">
+                  <Value>FailureOccurrenceLogic</Value>
+                </Property>
+              </Properties>
+              <Properties>
+                <Property Name="EventsEventName">ProcessingTimeBasedFailures.Event</Property>
+                <Property Name="EventsProcessName">
+                  <Value>FailureOccurrenceLogic</Value>
+                </Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="6" />
+      </Step>
+      <Step Type="Execute" Name="RunInitializedAddOnProcess" ID="6">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>RunInitializedAddOnProcess</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="7" />
+      </Step>
+      <Step Type="Decide" Name="IfOnShift" ExclusionExpression="Math.If(OnShiftAddOnProcess.HasValue, 0, 2)" ID="7">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">ResourceState!=List.ResourceStateName.OffShift</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="11" />
+        <Exit Name="False" Type="Alternate" NextID="8" />
+      </Step>
+      <Step Type="Decide" Name="IfOffShift" ExclusionExpression="Math.If((SuspendBatchingWhenDown == True) || OffShiftAddOnProcess.HasValue, 0, 2)" ID="8">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">ResourceState==List.ResourceStateName.OffShift</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="9" />
+      </Step>
+      <Step Type="Suspend" Name="Batching" ExclusionExpression="SuspendBatchingWhenDown == False" ID="9">
+        <Properties>
+          <Property Name="SuspendType">BatchLogic</Property>
+          <Property Name="BatchLogicName">
+            <Value>Batching</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="10" />
+      </Step>
+      <Step Type="Execute" Name="OffShiftAddOnProcess" ID="10">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>OffShiftAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+      <Step Type="Execute" Name="OnShiftAddOnProcess" ID="11">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>OnShiftAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

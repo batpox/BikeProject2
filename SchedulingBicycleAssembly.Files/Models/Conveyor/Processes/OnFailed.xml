@@ -1,0 +1,35 @@
+<Fragment>
+  <Process Name="OnFailed" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Suspend" Name="Processing" ID="2">
+        <Properties>
+          <Property Name="SuspendType">ObjectMovement</Property>
+          <Property Name="ObjectType">ParentObject</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Fire" Name="FailedEvent" ID="3">
+        <Properties>
+          <Property Name="EventName">Failed</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Execute" Name="FailedAddOnProcess" ID="4">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>FailedAddOnProcess</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Execute" Name="RepairingAddOnProcess" ID="5">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>RepairingAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

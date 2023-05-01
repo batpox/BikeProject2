@@ -1,0 +1,87 @@
+<Fragment>
+  <Process Name="MainFrame_StartingTask" BeginStepID="3" Category="MainFrameAdd-On Processes">
+    <Properties>
+      <Property Name="TokenClassName">TaskToken</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Interrupt" Name="Stock" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>Stock.PerformProcessingTask</Value>
+          </Property>
+          <Property Name="SelectionRule" RuleGuid="5b3f97f6-189c-450f-884d-8cdb80dc6fe2">
+            <Value>Smallest Value First</Value>
+            <Properties>
+              <Property Name="DynamicSelectionExpression">Candidate.Entity.ID</Property>
+              <Property Name="FilterExpression">Candidate.ModelEntity.MaterialRef == TaskToken.MaterialRef</Property>
+            </Properties>
+          </Property>
+          <Property Name="InterruptedProcessAction">EndDelay</Property>
+          <Property Name="Limit">BillOfMaterials.RequiredQuantity</Property>
+          <Property Name="SaveNumberInterrupted">
+            <Value>TaskToken.NumberFound</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Original" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Search" Name="BillOfMaterials" ID="3">
+        <Properties>
+          <Property Name="CollectionType">TableRows</Property>
+          <Property Name="TableName">BillOfMaterials</Property>
+          <Property Name="SearchType">ForwardSumExpression</Property>
+          <Property Name="MatchCondition">BillOfMaterials.MaterialUse == Enum.MaterialActionType.Consume</Property>
+          <Property Name="Limit">Infinity</Property>
+          <Property Name="CopyOverTableRowReferences">False</Property>
+          <Property Name="SetTableRowConflictResolution">Abort</Property>
+        </Properties>
+        <Exit Name="Found" Type="Alternate" NextID="4" />
+      </Step>
+      <Step Type="Assign" Name="MaterialRef" ID="4">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>TaskToken.MaterialRef</Value>
+          </Property>
+          <Property Name="NewValue">BillOfMaterials.ComponentMaterial</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="7" />
+      </Step>
+      <Step Type="Decide" Name="NumberFound &gt; 0" ID="5">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">TaskToken.NumberFound &gt; 0</Property>
+        </Properties>
+        <Exit Name="False" Type="Alternate" NextID="6" />
+      </Step>
+      <Step Type="Notify" Name="Notify1" Color="ff80ff" ID="6">
+        <Properties>
+          <Property Name="NotificationType">Warning</Property>
+          <Property Name="MessageHeading">"Number Found = 0"</Property>
+        </Properties>
+      </Step>
+      <Step Type="Decide" Name="Is MFG" ID="7">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">String.Contains( TaskToken.MaterialRef.Name, "Green") || String.Contains( TaskToken.MaterialRef.Name, "White")</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="2" />
+        <Exit Name="False" Type="Alternate" NextID="8" />
+      </Step>
+      <Step Type="Interrupt" Name="Receiving" ID="8">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>Receiving.PerformProcessingTask</Value>
+          </Property>
+          <Property Name="SelectionRule" RuleGuid="5b3f97f6-189c-450f-884d-8cdb80dc6fe2">
+            <Value>Smallest Value First</Value>
+            <Properties>
+              <Property Name="DynamicSelectionExpression">Candidate.Entity.ID</Property>
+              <Property Name="FilterExpression">Candidate.ModelEntity.MaterialRef == TaskToken.MaterialRef</Property>
+            </Properties>
+          </Property>
+          <Property Name="InterruptedProcessAction">EndDelay</Property>
+          <Property Name="Limit">BillOfMaterials.RequiredQuantity</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

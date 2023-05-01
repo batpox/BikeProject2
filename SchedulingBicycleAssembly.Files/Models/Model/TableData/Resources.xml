@@ -1,0 +1,411 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">MFGMaterials</Property>
+      <Property Name="Description">MRPOrders</Property>
+      <Property Name="XLocation">-34.7210226770456</Property>
+      <Property Name="ZLocation">2.78670889261551</Property>
+      <Property Name="ObjectType">Source</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">AssemblyNode</Property>
+      <Property Name="Description">Assembly</Property>
+      <Property Name="XLocation">-27</Property>
+      <Property Name="ZLocation">15</Property>
+      <Property Name="ObjectType">AssemblyLineTransferNode</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">MainFrame1</Property>
+      <Property Name="Description">Mainframe1</Property>
+      <Property Name="XLocation">-18.75</Property>
+      <Property Name="ZLocation">13</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Mainframe</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">MainFrame2</Property>
+      <Property Name="Description">Mainframe2</Property>
+      <Property Name="XLocation">-18.9888264854112</Property>
+      <Property Name="ZLocation">16.7021804931601</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Mainframe</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Power1</Property>
+      <Property Name="Description">Power1</Property>
+      <Property Name="XLocation">-8.75</Property>
+      <Property Name="ZLocation">13.0970886661462</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Power</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Power2</Property>
+      <Property Name="Description">Power2</Property>
+      <Property Name="XLocation">-9.26822091398707</Property>
+      <Property Name="ZLocation">16.7913816490565</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Power</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Final1</Property>
+      <Property Name="Description">Final1</Property>
+      <Property Name="XLocation">0.455223839709118</Property>
+      <Property Name="ZLocation">13.0802349908772</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Final</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Final2</Property>
+      <Property Name="Description">Final2</Property>
+      <Property Name="XLocation">0.665621285220085</Property>
+      <Property Name="ZLocation">16.8145132181269</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Final</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Test1</Property>
+      <Property Name="Description">Test1</Property>
+      <Property Name="XLocation">9.92420954105911</Property>
+      <Property Name="ZLocation">13.136414668171</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Test</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Test2</Property>
+      <Property Name="Description">Test2</Property>
+      <Property Name="XLocation">9.78002789037339</Property>
+      <Property Name="ZLocation">16.8838439817794</Property>
+      <Property Name="Area">Assembly Line</Property>
+      <Property Name="Workcell">Test</Property>
+      <Property Name="ObjectType">AssemblyLineServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Cut</Property>
+      <Property Name="Description">Cut</Property>
+      <Property Name="XLocation">-34.82369119104</Property>
+      <Property Name="ZLocation">-32.290538835637</Property>
+      <Property Name="ObjectType">ComponentManufacturingTransferNode</Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Cut1</Property>
+      <Property Name="Description">Cut1</Property>
+      <Property Name="XLocation">-24.7342230426109</Property>
+      <Property Name="ZLocation">-35.7042523365823</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Cut</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Cut2</Property>
+      <Property Name="Description">Cut2</Property>
+      <Property Name="XLocation">-25</Property>
+      <Property Name="ZLocation">-30</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Cut</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Shape</Property>
+      <Property Name="Description">Shape</Property>
+      <Property Name="XLocation">-9.99934749299163</Property>
+      <Property Name="ZLocation">-31.5746515288688</Property>
+      <Property Name="ObjectType">ComponentManufacturingTransferNode</Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Shape1</Property>
+      <Property Name="Description">Shape1</Property>
+      <Property Name="XLocation">1.25</Property>
+      <Property Name="ZLocation">-45</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Shape</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Shape2</Property>
+      <Property Name="Description">Shape2</Property>
+      <Property Name="XLocation">1.26529295876109</Property>
+      <Property Name="ZLocation">-38.3746396961531</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Shape</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Paint</Property>
+      <Property Name="Description">Paint</Property>
+      <Property Name="XLocation">-21.231366547447</Property>
+      <Property Name="ZLocation">-4.10264245326287</Property>
+      <Property Name="ObjectType">ComponentManufacturingTransferNode</Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Paint1</Property>
+      <Property Name="Description">Paint1</Property>
+      <Property Name="XLocation">-12.5</Property>
+      <Property Name="ZLocation">-7.70092861632991</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Paint</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Paint2</Property>
+      <Property Name="Description">Paint2</Property>
+      <Property Name="XLocation">-12.4355987264004</Property>
+      <Property Name="ZLocation">-2.00565027191139</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Paint</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Weld</Property>
+      <Property Name="XLocation">-10.5629515985932</Property>
+      <Property Name="ZLocation">-16.5462041106128</Property>
+      <Property Name="ObjectType">ComponentManufacturingTransferNode</Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Weld1</Property>
+      <Property Name="Description">Weld1</Property>
+      <Property Name="XLocation">-0.80575446006893</Property>
+      <Property Name="ZLocation">-20.6273866543723</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Weld</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Weld2</Property>
+      <Property Name="Description">Weld2</Property>
+      <Property Name="XLocation">-0.625</Property>
+      <Property Name="ZLocation">-14.0625</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Weld</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Machine</Property>
+      <Property Name="XLocation">-35.0175199328446</Property>
+      <Property Name="ZLocation">-16.4360476791266</Property>
+      <Property Name="ObjectType">ComponentManufacturingTransferNode</Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Machine1</Property>
+      <Property Name="Description">Machine1</Property>
+      <Property Name="XLocation">-24.4280795297999</Property>
+      <Property Name="ZLocation">-20.8382440518646</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Machine</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Machine2</Property>
+      <Property Name="Description">Machine2</Property>
+      <Property Name="XLocation">-24.4425713379614</Property>
+      <Property Name="ZLocation">-14.0126227498599</Property>
+      <Property Name="Area">Component Manufacturing</Property>
+      <Property Name="Workcell">Machine</Property>
+      <Property Name="ObjectType">ComponentManufacturingServer</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">AssemblyLine</Property>
+      <Property Name="Description">AssemblyLine</Property>
+      <Property Name="XLocation">-28.7820957245748</Property>
+      <Property Name="ZLocation">8.22410376171736</Property>
+      <Property Name="ObjectType">Separator</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">PackAndShip</Property>
+      <Property Name="Description">PackAndShip</Property>
+      <Property Name="XLocation">35.2944218834073</Property>
+      <Property Name="ZLocation">-3.02383933224379</Property>
+      <Property Name="ObjectType">Combiner</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Customer</Property>
+      <Property Name="Description">Customer</Property>
+      <Property Name="XLocation">45.5732134149187</Property>
+      <Property Name="ZLocation">-6.02993576791552</Property>
+      <Property Name="ObjectType">Sink</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">PurchasedMaterials</Property>
+      <Property Name="Description">PurchasedParts</Property>
+      <Property Name="XLocation">25.0141942164812</Property>
+      <Property Name="ZLocation">-18.4950396876084</Property>
+      <Property Name="ObjectType">Source</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">StockVehicle</Property>
+      <Property Name="Description">StockVehicle</Property>
+      <Property Name="XLocation">24.2500002897794</Property>
+      <Property Name="ZLocation">-11.9460591265896</Property>
+      <Property Name="ObjectType">Vehicle</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">ReceivingVehicle</Property>
+      <Property Name="Description">ReceivingVehicle</Property>
+      <Property Name="XLocation">38.5307385784296</Property>
+      <Property Name="ZLocation">-11.7871727718795</Property>
+      <Property Name="ObjectType">Vehicle</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Assemblers1stShift</Property>
+      <Property Name="Description">Assemblers1stShift</Property>
+      <Property Name="XLocation">-53.968315602504</Property>
+      <Property Name="ZLocation">-5.43360344321505</Property>
+      <Property Name="ObjectType">Worker</Property>
+      <Property Name="WorkSchedule">5Day12Hour1stShift</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Assemblers2ndShift</Property>
+      <Property Name="Description">Assemblers2ndShift</Property>
+      <Property Name="XLocation">-53.968315602504</Property>
+      <Property Name="ZLocation">-5.43360344321505</Property>
+      <Property Name="ObjectType">Worker</Property>
+      <Property Name="WorkSchedule">5Day12Hour2ndShift</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Operators</Property>
+      <Property Name="Description">Operators</Property>
+      <Property Name="XLocation">-46.221830333534</Property>
+      <Property Name="ZLocation">-5.63095639664253</Property>
+      <Property Name="ObjectType">Worker</Property>
+      <Property Name="WorkSchedule">5Day8Hour1stShift</Property>
+      <Property Name="CostRate" Units="USD per Hour">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Receiving</Property>
+      <Property Name="Description">Receiving</Property>
+      <Property Name="XLocation">46</Property>
+      <Property Name="ZLocation">-18.5</Property>
+      <Property Name="Area">Shipping and Receiving</Property>
+      <Property Name="Workcell">Receiving</Property>
+      <Property Name="ObjectType">Server</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Stock</Property>
+      <Property Name="Description">Stock</Property>
+      <Property Name="XLocation">-2.5</Property>
+      <Property Name="ZLocation">-3.75</Property>
+      <Property Name="Area">Shipping and Receiving</Property>
+      <Property Name="Workcell">Stock</Property>
+      <Property Name="ObjectType">Server</Property>
+      <Property Name="WorkSchedule"></Property>
+      <Property Name="CostRate" Units="USD per Hour">0</Property>
+    </Properties>
+  </Row>
+</Fragment>

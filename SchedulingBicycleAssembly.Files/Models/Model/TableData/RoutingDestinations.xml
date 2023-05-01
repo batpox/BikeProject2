@@ -1,0 +1,74 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Cut</Property>
+      <Property Name="Node">Input@Cut1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Cut</Property>
+      <Property Name="Node">Input@Cut2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Shape</Property>
+      <Property Name="Node">Input@Shape1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Shape</Property>
+      <Property Name="Node">Input@Shape2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Weld</Property>
+      <Property Name="Node">Input@Weld1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Weld</Property>
+      <Property Name="Node">Input@Weld2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Paint</Property>
+      <Property Name="Node">Input@Paint1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Paint</Property>
+      <Property Name="Node">Input@Paint2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Machine</Property>
+      <Property Name="Node">Input@Machine1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">Machine</Property>
+      <Property Name="Node">Input@Machine2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">AssemblyNode</Property>
+      <Property Name="Node">Input@MainFrame1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="ResourceName">AssemblyNode</Property>
+      <Property Name="Node">Input@MainFrame2</Property>
+    </Properties>
+  </Row>
+</Fragment>

@@ -1,0 +1,239 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Frame_10</Property>
+      <Property Name="MaterialName">Frame</Property>
+      <Property Name="Sequence">Shape</Property>
+      <Property Name="SetupTime">30</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Frame_20</Property>
+      <Property Name="MaterialName">Frame</Property>
+      <Property Name="Sequence">Cut</Property>
+      <Property Name="RouteNumber">20</Property>
+      <Property Name="SetupTime">20</Property>
+      <Property Name="ProcessTime">3</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Frame_30</Property>
+      <Property Name="MaterialName">Frame</Property>
+      <Property Name="Sequence">Machine</Property>
+      <Property Name="RouteNumber">30</Property>
+      <Property Name="ProcessTime">4</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Frame_40</Property>
+      <Property Name="MaterialName">Frame</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">40</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFrame_10</Property>
+      <Property Name="MaterialName">GreenFinishedFrame</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFrame_20</Property>
+      <Property Name="MaterialName">GreenFinishedFrame</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFrame_10</Property>
+      <Property Name="MaterialName">WhiteFinishedFrame</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFrame_20</Property>
+      <Property Name="MaterialName">WhiteFinishedFrame</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_10</Property>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Sequence">Cut</Property>
+      <Property Name="SetupTime">30</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_20</Property>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Sequence">Shape</Property>
+      <Property Name="RouteNumber">20</Property>
+      <Property Name="SetupTime">40</Property>
+      <Property Name="ProcessTime">4</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_30</Property>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Sequence">Machine</Property>
+      <Property Name="RouteNumber">30</Property>
+      <Property Name="SetupTime">30</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_40</Property>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Sequence">Weld</Property>
+      <Property Name="RouteNumber">40</Property>
+      <Property Name="ProcessTime">3</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_50</Property>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">50</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFork_10</Property>
+      <Property Name="MaterialName">GreenFinishedFork</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFork_20</Property>
+      <Property Name="MaterialName">GreenFinishedFork</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFork_10</Property>
+      <Property Name="MaterialName">WhiteFinishedFork</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFork_20</Property>
+      <Property Name="MaterialName">WhiteFinishedFork</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">HandleBar_10</Property>
+      <Property Name="MaterialName">HandleBar</Property>
+      <Property Name="Sequence">Cut</Property>
+      <Property Name="SetupTime">10</Property>
+      <Property Name="ProcessTime">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">HandleBar_20</Property>
+      <Property Name="MaterialName">HandleBar</Property>
+      <Property Name="Sequence">Shape</Property>
+      <Property Name="RouteNumber">20</Property>
+      <Property Name="SetupTime">30</Property>
+      <Property Name="ProcessTime">2</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">HandleBar_30</Property>
+      <Property Name="MaterialName">HandleBar</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">30</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedHandleBar_10</Property>
+      <Property Name="MaterialName">GreenFinishedHandleBar</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedHandleBar_20</Property>
+      <Property Name="MaterialName">GreenFinishedHandleBar</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedHandleBar_10</Property>
+      <Property Name="MaterialName">WhiteFinishedHandleBar</Property>
+      <Property Name="Sequence">Paint</Property>
+      <Property Name="ProcessTime">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedHandleBar_20</Property>
+      <Property Name="MaterialName">WhiteFinishedHandleBar</Property>
+      <Property Name="Sequence">Stock</Property>
+      <Property Name="RouteNumber">20</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="MaterialName">EcoBikeSTDGreen</Property>
+      <Property Name="Sequence">AssemblyLine</Property>
+      <Property Name="ProcessTime">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="MaterialName">EcoBikeSTDWhite</Property>
+      <Property Name="Sequence">AssemblyLine</Property>
+      <Property Name="ProcessTime">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="MaterialName">EcoBikeEXTGreen</Property>
+      <Property Name="Sequence">AssemblyLine</Property>
+      <Property Name="ProcessTime">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="MaterialName">EcoBikeEXTWhite</Property>
+      <Property Name="Sequence">AssemblyLine</Property>
+      <Property Name="ProcessTime">60</Property>
+    </Properties>
+  </Row>
+</Fragment>

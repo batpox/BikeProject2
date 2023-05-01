@@ -1,0 +1,43 @@
+<Fragment>
+  <Process Name="Input_Stock_Entered" BeginStepID="6" Category="Input@Stock Add-On Processes">
+    <Properties />
+    <Steps>
+      <Step Type="Assign" Name="InitialQtyFlag" ID="2">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>ModelEntity.InitialQtyFlag</Value>
+          </Property>
+          <Property Name="NewValue">True</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="Decide" Name="InitialQtyFlag == False" ID="3">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">ModelEntity.InitialQtyFlag == False</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Create" Name="MFGOrder" ID="4">
+        <Properties>
+          <Property Name="CreateType">CopyAssociatedObject</Property>
+          <Property Name="EntityType">MFGOrder</Property>
+          <Property Name="NumberToCreate">ManufacturingOrders.Quantity - 1</Property>
+        </Properties>
+        <Exit Name="Created" Type="Alternate" NextID="2" />
+      </Step>
+      <Step Type="Transfer" Name="Input@Stock" Color="f00000" ID="5">
+        <Properties>
+          <Property Name="NodeName">Input@Stock</Property>
+        </Properties>
+      </Step>
+      <Step Type="Decide" Name="Is.ModelEntity " ID="6">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Is.ModelEntity == True</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="3" />
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

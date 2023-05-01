@@ -1,0 +1,510 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Frame_40</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Frame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">Fork_50</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Fork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">HandleBar_30</Property>
+      <Property Name="ComponentMaterial">
+        <Value>HandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFrame_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Frame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFrame_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFrame_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Frame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFrame_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedHandleBar_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>HandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedHandleBar_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedHandleBar_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>HandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedHandleBar_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFork_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Fork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">GreenFinishedFork_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFork_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Fork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">WhiteFinishedFork_20</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Seat</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>BrakeSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WheelSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>StdBattery</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Motor</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>FenderSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>EcoBikeSTDGreen</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Seat</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>BrakeSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WheelSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>StdBattery</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Motor</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>FenderSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeSTDWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>EcoBikeSTDWhite</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>GreenFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Seat</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>BrakeSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WheelSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>ExtBattery</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Motor</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>FenderSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTGreen_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>EcoBikeEXTGreen</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFrame</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedFork</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WhiteFinishedHandleBar</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Seat</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>BrakeSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>WheelSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>ExtBattery</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>Motor</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>FenderSet</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="RoutingKey">EcoBikeEXTWhite_10</Property>
+      <Property Name="ComponentMaterial">
+        <Value>EcoBikeEXTWhite</Value>
+      </Property>
+      <Property Name="RequiredQuantity">1</Property>
+      <Property Name="MaterialUse">Produce</Property>
+    </Properties>
+  </Row>
+</Fragment>

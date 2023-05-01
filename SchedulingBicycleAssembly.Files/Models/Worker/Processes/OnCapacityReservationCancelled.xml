@@ -1,0 +1,20 @@
+<Fragment>
+  <Process Name="OnCapacityReservationCancelled" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnCapacityReservationCancelled" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Allocate" Name="Worker" ID="2">
+        <Properties>
+          <Property Name="ResourceType">ParentObject</Property>
+        </Properties>
+        <Exit Name="Failed" Type="Alternate" NextID="3" />
+      </Step>
+      <Step Type="PlanVisit" Name="NewTransportRequests" ID="3">
+        <Properties>
+          <Property Name="EntityType">ParentObject</Property>
+          <Property Name="SelectionGoal">TaskSelectionStrategy</Property>
+        </Properties>
+        <Exit Name="OK" Type="Primary" NextID="3" />
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

@@ -1,0 +1,52 @@
+<Fragment>
+  <Process Name="OnEnteredMemberInputBuffer" BeginStepID="2">
+    <Properties>
+      <Property Name="TriggeringEventName">MemberInputBuffer.Entered</Property>
+      <Property Name="TokenActionOnAssociatedObjectDestroyed">EndProcess</Property>
+      <Property Name="TokenActionOnAssociatedObjectTransferRequested">EndProcess</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Assign" Name="OnMemberEnteringAssignments" ID="2">
+        <Properties>
+          <Property Name="Assignments">
+            <Value>AssignmentsOnMemberEntering</Value>
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>AssignmentsOnMemberEnteringStateVariableName</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">AssignmentsOnMemberEnteringNewValue</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Execute" Name="MemberEnteredAddOnProcess" ID="3">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>MemberEnteredAddOnProcess</Value>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Delay" Name="MemberTransferInTime" ID="4">
+        <Properties>
+          <Property Name="DelayTime">MemberTransferInTime</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="5" />
+      </Step>
+      <Step Type="EndTransfer" Name="IntoMemberInputBuffer" ID="5">
+        <Properties />
+        <Exit Name="Exit" Type="Primary" NextID="6" />
+      </Step>
+      <Step Type="Batch" Name="Member" ID="6">
+        <Properties>
+          <Property Name="BatchLogicName">
+            <Value>Batching</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

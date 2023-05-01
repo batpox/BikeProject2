@@ -1,0 +1,82 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">ST_01</Property>
+      <Property Name="MaterialName">Seat</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">75</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">ST_02</Property>
+      <Property Name="MaterialName">Seat</Property>
+      <Property Name="ArrivalDate">2017-12-06T11:00:00.0000000</Property>
+      <Property Name="Quantity">75</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">BS_01</Property>
+      <Property Name="MaterialName">BrakeSet</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">BS_02</Property>
+      <Property Name="MaterialName">BrakeSet</Property>
+      <Property Name="ArrivalDate">2017-12-06T11:00:00.0000000</Property>
+      <Property Name="Quantity">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">WS_01</Property>
+      <Property Name="MaterialName">WheelSet</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">WS_02</Property>
+      <Property Name="MaterialName">WheelSet</Property>
+      <Property Name="ArrivalDate">2017-12-06T11:00:00.0000000</Property>
+      <Property Name="Quantity">60</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">SB_01</Property>
+      <Property Name="MaterialName">StdBattery</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">120</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">EB_01</Property>
+      <Property Name="MaterialName">ExtBattery</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">120</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">M_01</Property>
+      <Property Name="MaterialName">Motor</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">120</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="PONumber">FS_01</Property>
+      <Property Name="MaterialName">FenderSet</Property>
+      <Property Name="ArrivalDate">2017-12-04T11:00:00.0000000</Property>
+      <Property Name="Quantity">120</Property>
+    </Properties>
+  </Row>
+</Fragment>

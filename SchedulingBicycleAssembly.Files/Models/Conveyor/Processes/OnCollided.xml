@@ -1,0 +1,54 @@
+<Fragment>
+  <Process Name="OnCollided" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Link.OnCollided" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Decide" Name="IfAccumulating" ExclusionExpression="Math.If(Accumulating, 1, 2)" ID="2">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Accumulating</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="4" />
+        <Exit Name="False" Type="Alternate" NextID="3" />
+      </Step>
+      <Step Type="Assign" Name="ConveyorMovementRate" ID="3">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>Movement.Rate</Value>
+          </Property>
+          <Property Name="NewValue">Math.If(Entity.NextEntityAheadOnLink != Nothing, Entity.NextEntityAheadOnLink.Movement.Rate, DesiredSpeed)</Property>
+        </Properties>
+      </Step>
+      <Step Type="Decide" Name="IfEntityAlignmentIsCellLocation" ExclusionExpression="Math.If(EntityAlignment == Enum.EntityAlignment.CellLocation, 1, 2)" ID="4">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">EntityAlignment==Enum.EntityAlignment.CellLocation</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="6" />
+        <Exit Name="False" Type="Alternate" NextID="5" />
+      </Step>
+      <Step Type="Disengage" Name="FromLinkPosition" ID="5">
+        <Properties>
+          <Property Name="EntityMovementRate">Math.If(Entity.NextEntityAheadOnLink != Nothing, Math.Min(Movement.Rate, Entity.NextEntityAheadOnLink.Movement.Rate), Movement.Rate)</Property>
+        </Properties>
+      </Step>
+      <Step Type="Disengage" Name="FromLinkPosition" ID="6">
+        <Properties>
+          <Property Name="EntityMovementRate">0.0</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="7" />
+      </Step>
+      <Step Type="Decide" Name="IfShouldReengage" ID="7">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Math.If(Entity.NextEntityAheadOnLink != Nothing, Entity.NextEntityAheadOnLink.Movement.Rate, Entity.DesiredSpeed) &gt; 0</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="8" />
+      </Step>
+      <Step Type="Engage" Name="WithLinkPosition" ID="8">
+        <Properties>
+          <Property Name="MinimumCellsBeforeEngaging">1</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

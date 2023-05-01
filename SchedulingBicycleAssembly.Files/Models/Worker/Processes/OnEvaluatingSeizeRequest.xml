@@ -1,0 +1,14 @@
+<Fragment>
+  <Process Name="OnEvaluatingSeizeRequest" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnEvaluatingSeizeRequest" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Execute" Name="EvaluatingSeizeRequestAddOnProcess" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>EvaluatingSeizeRequestAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

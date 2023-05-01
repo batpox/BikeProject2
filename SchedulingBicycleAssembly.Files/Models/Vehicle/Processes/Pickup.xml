@@ -1,0 +1,14 @@
+<Fragment>
+  <Process Name="Pickup" BeginStepID="2" Category="Deprecated Processes">
+    <Properties />
+    <Steps>
+      <Step Type="Pickup" Name="Rider" ID="2">
+        <Properties>
+          <Property Name="TransporterType">ParentObject</Property>
+          <Property Name="SelectionGoal">TaskSelectionStrategy</Property>
+          <Property Name="LoadTime">LoadTime</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

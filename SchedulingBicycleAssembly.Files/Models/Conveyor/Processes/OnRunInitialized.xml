@@ -1,0 +1,56 @@
+<Fragment>
+  <Process Name="OnRunInitialized" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnRunInitialized" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Assign" Name="ToEnableFailures" ExclusionExpression="FailureType == List.ConveyorFailureType.NoFailures" ID="2">
+        <Properties>
+          <Property Name="Assignments">
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>CalendarTimeBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.ConveyorFailureType.CalendarTimeBased</Property>
+              </Properties>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>EventCountBasedFailures.Enabled</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Run.RandomnessDisabled==False</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">FailureType!=List.ConveyorFailureType.EventCountBased</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Subscribe" Name="ToFailureEvents" ExclusionExpression="FailureType == List.ConveyorFailureType.NoFailures" ID="3">
+        <Properties>
+          <Property Name="EventName">CalendarTimeBasedFailures.Event</Property>
+          <Property Name="ProcessName">
+            <Value>FailureOccurrenceLogic</Value>
+          </Property>
+          <Property Name="Events">
+            <Rows>
+              <Properties>
+                <Property Name="EventsEventName">EventCountBasedFailures.Event</Property>
+                <Property Name="EventsProcessName">
+                  <Value>FailureOccurrenceLogic</Value>
+                </Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Execute" Name="RunInitializedAddOnProcess" ID="4">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>RunInitializedAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

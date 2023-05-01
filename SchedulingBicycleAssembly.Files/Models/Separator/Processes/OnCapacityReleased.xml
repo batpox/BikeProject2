@@ -1,0 +1,29 @@
+<Fragment>
+  <Process Name="OnCapacityReleased" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnCapacityReleased" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Assign" Name="ResourceState" ID="2">
+        <Properties>
+          <Property Name="Assignments">
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>ResourceState</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">List.ResourceStateName.Processing</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">(Capacity==0)||(ResourceOwners==0)||((Capacity.Remaining&lt;=0)&amp;&amp;((OnEnteredProcessing.TokensInProcess.NumberBlocked+Processing.NumberTransferringOut)&gt;=ResourceOwners))</Property>
+              </Properties>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>ResourceState</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">List.ResourceStateName.OffShift</Property>
+                <Property Name="AssignmentsSkipAssignmentCondition">(Capacity&gt;0)||(ResourceOwners&gt;0)</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

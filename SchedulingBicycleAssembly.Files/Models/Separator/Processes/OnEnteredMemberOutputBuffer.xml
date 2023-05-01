@@ -1,0 +1,38 @@
+<Fragment>
+  <Process Name="OnEnteredMemberOutputBuffer" BeginStepID="2">
+    <Properties>
+      <Property Name="TriggeringEventName">MemberOutputBuffer.Entered</Property>
+      <Property Name="TokenActionOnAssociatedObjectDestroyed">EndProcess</Property>
+      <Property Name="TokenActionOnAssociatedObjectTransferRequested">EndProcess</Property>
+    </Properties>
+    <Steps>
+      <Step Type="EndTransfer" Name="IntoMemberOutputBuffer" ID="2">
+        <Properties />
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Assign" Name="BeforeMemberExitingAssignments" ID="3">
+        <Properties>
+          <Property Name="Assignments">
+            <Value>AssignmentsBeforeMemberExiting</Value>
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>AssignmentsBeforeMemberExitingStateVariableName</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">AssignmentsBeforeMemberExitingNewValue</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="4" />
+      </Step>
+      <Step Type="Transfer" Name="ToMemberOutputNode" ID="4">
+        <Properties>
+          <Property Name="FromType">CurrentStation</Property>
+          <Property Name="ToType">ParentExternalNode</Property>
+          <Property Name="ExternalNodeName">MemberOutput</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

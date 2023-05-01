@@ -1,0 +1,149 @@
+<Fragment>
+  <Process Name="OnEnteredFreeSpace" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Entity.OnEnteredFreeSpace" BeginStepID="2" ExcludedFromLimits="True">
+    <Properties>
+      <Property Name="TokenClassName">FreeSpaceSteeringToken</Property>
+      <Property Name="TokenActionOnAssociatedObjectDestroyed">EndProcess</Property>
+      <Property Name="TokenActionOnAssociatedObjectTransferRequested">EndProcess</Property>
+    </Properties>
+    <Steps>
+      <Step Type="Assign" Name="OnEnteredFreeSpaceAssignments" ID="2">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>FreeSpaceSteeringToken.EnteredFreeSpaceFromNode</Value>
+          </Property>
+          <Property Name="NewValue">Math.If(PreviousNode != Nothing, DirectDistanceTo.Object(PreviousNode) == 0.0, False)</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Decide" Name="IfDestinationNode" ID="3">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">DestinationNode != Nothing</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="13" />
+        <Exit Name="False" Type="Alternate" NextID="4" />
+      </Step>
+      <Step Type="Decide" Name="IfEnteredFreeSpaceFromNode" ID="4">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">FreeSpaceSteeringToken.EnteredFreeSpaceFromNode</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="6" />
+        <Exit Name="False" Type="Alternate" NextID="5" />
+      </Step>
+      <Step Type="Assign" Name="MovementRate" ID="5">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>Movement.Rate</Value>
+          </Property>
+        </Properties>
+      </Step>
+      <Step Type="Assign" Name="GetNetworkPath" ID="6">
+        <Properties>
+          <Property Name="StateVariableName">
+            <Value>FreeSpaceSteeringToken.NetworkPathNextLink</Value>
+          </Property>
+          <Property Name="NewValue">PreviousNode.OutboundLinks.SelectItemFor(Entity)</Property>
+          <Property Name="Assignments">
+            <Rows>
+              <Properties>
+                <Property Name="AssignmentsStateVariableName">
+                  <Value>FreeSpaceSteeringToken.NetworkPathNextNode</Value>
+                </Property>
+                <Property Name="AssignmentsNewValue">Math.If(FreeSpaceSteeringToken.NetworkPathNextLink != Nothing, Math.If(PreviousNode == FreeSpaceSteeringToken.NetworkPathNextLink.StartingNode, FreeSpaceSteeringToken.NetworkPathNextLink.EndingNode, FreeSpaceSteeringToken.NetworkPathNextLink.StartingNode), Nothing)</Property>
+              </Properties>
+            </Rows>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="7" />
+      </Step>
+      <Step Type="Decide" Name="IfNetworkPath" ID="7">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">FreeSpaceSteeringToken.NetworkPathNextLink != Nothing</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="12" />
+        <Exit Name="False" Type="Alternate" NextID="8" />
+      </Step>
+      <Step Type="Decide" Name="IfNearestInputNode" ID="8">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">PreviousNode.Nearest.InputNode != Nothing</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="11" />
+        <Exit Name="False" Type="Alternate" NextID="9" />
+      </Step>
+      <Step Type="Decide" Name="IfNearestNode" ID="9">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">PreviousNode.Nearest.Node != Nothing</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="10" />
+        <Exit Name="False" Type="Alternate" NextID="5" />
+      </Step>
+      <Step Type="SetNode" Name="ToNearestNode" ID="10">
+        <Properties>
+          <Property Name="NodeName">PreviousNode.Nearest.Node</Property>
+          <Property Name="AutoClearIfVisitDifferentNode">True</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="13" />
+      </Step>
+      <Step Type="SetNode" Name="ToNearestInputNode" ID="11">
+        <Properties>
+          <Property Name="NodeName">PreviousNode.Nearest.InputNode</Property>
+          <Property Name="AutoClearIfVisitDifferentNode">True</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="13" />
+      </Step>
+      <Step Type="SetNode" Name="ToPathNextNode" ID="12">
+        <Properties>
+          <Property Name="NodeName">FreeSpaceSteeringToken.NetworkPathNextNode</Property>
+          <Property Name="AutoClearIfVisitDifferentNode">True</Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="13" />
+      </Step>
+      <Step Type="Decide" Name="IfDirectToDestination" ID="13">
+        <Properties>
+          <Property Name="DecideType">ConditionBased</Property>
+          <Property Name="ConditionOrProbability">Math.If(FreeSpaceSteeringBehavior == List.FreeSpaceSteeringBehaviorType.DirectToDestination || CurrentNetwork == Nothing || !FreeSpaceSteeringToken.EnteredFreeSpaceFromNode, True, !CurrentNetwork.PathExists(PreviousNode, DestinationNode))</Property>
+        </Properties>
+        <Exit Name="True" Type="Primary" NextID="15" />
+        <Exit Name="False" Type="Alternate" NextID="14" />
+      </Step>
+      <Step Type="Travel" Name="FollowNetworkPath" ID="14">
+        <Properties>
+          <Property Name="SteeringBehavior" BehaviorGuid="6cbbbd77-ba6d-45d1-bcc7-0ed1bbd08ae8">
+            <Value>Follow Network Path</Value>
+            <Properties>
+              <Property Name="NetworkName">
+                <Value>CurrentNetwork</Value>
+              </Property>
+              <Property Name="StartingNode">PreviousNode</Property>
+              <Property Name="EndingNode">DestinationNode</Property>
+              <Property Name="UpdateTimeInterval">FreeSpaceSteeringUpdateInterval</Property>
+              <Property Name="AvoidCollisions">FreeSpaceSteeringAvoidCollisions</Property>
+            </Properties>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="16" />
+      </Step>
+      <Step Type="Travel" Name="DirectToDestination" ID="15">
+        <Properties>
+          <Property Name="SteeringBehavior" BehaviorGuid="2b2ac6d5-73de-4ac8-bfc8-8b0ea2fdbe1e">
+            <Value>Direct To Destination</Value>
+            <Properties>
+              <Property Name="DestinationObject">DestinationNode</Property>
+              <Property Name="MaximumMovementRate">DesiredSpeed</Property>
+            </Properties>
+          </Property>
+        </Properties>
+        <Exit Name="Exit" Type="Primary" NextID="16" />
+      </Step>
+      <Step Type="Transfer" Name="ToDestinationNode" ID="16">
+        <Properties>
+          <Property Name="NodeName">DestinationNode</Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

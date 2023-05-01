@@ -1,0 +1,20 @@
+<Fragment>
+  <Process Name="OnTrailingEdgeEntered" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Link.OnTrailingEdgeEntered" BeginStepID="2">
+    <Properties>
+      <Property Name="TokenActionOnAssociatedObjectDestroyed">EndProcess</Property>
+    </Properties>
+    <Steps>
+      <Step Type="EndTransfer" Name="OntoConveyor" ID="2">
+        <Properties />
+        <Exit Name="Exit" Type="Primary" NextID="3" />
+      </Step>
+      <Step Type="Execute" Name="TrailingEdgeEnteredAddOnProcess" ID="3">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>TrailingEdgeEnteredAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>

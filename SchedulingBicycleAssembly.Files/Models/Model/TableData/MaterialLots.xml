@@ -1,0 +1,98 @@
+<Fragment>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">Frame</Property>
+      <Property Name="Quantity">69</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">GreenFinishedFrame</Property>
+      <Property Name="Quantity">14</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">WhiteFinishedFrame</Property>
+      <Property Name="Quantity">19</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">Fork</Property>
+      <Property Name="Quantity">28</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">GreenFinishedFork</Property>
+      <Property Name="Quantity">14</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">WhiteFinishedFork</Property>
+      <Property Name="Quantity">19</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">HandleBar</Property>
+      <Property Name="Quantity">62</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">GreenFinishedHandleBar</Property>
+      <Property Name="Quantity">14</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">WhiteFinishedHandleBar</Property>
+      <Property Name="Quantity">19</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">Seat</Property>
+      <Property Name="Quantity">32</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">BrakeSet</Property>
+      <Property Name="Quantity">18</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">WheelSet</Property>
+      <Property Name="Quantity">28</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">StdBattery</Property>
+      <Property Name="Quantity">17</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">ExtBattery</Property>
+      <Property Name="Quantity">32</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">Motor</Property>
+      <Property Name="Quantity">94</Property>
+    </Properties>
+  </Row>
+  <Row>
+    <Properties>
+      <Property Name="MaterialName">FenderSet</Property>
+      <Property Name="Quantity">102</Property>
+    </Properties>
+  </Row>
+</Fragment>

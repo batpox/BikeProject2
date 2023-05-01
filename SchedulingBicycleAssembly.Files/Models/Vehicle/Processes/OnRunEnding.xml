@@ -1,0 +1,14 @@
+<Fragment>
+  <Process Name="OnRunEnding" IsOverride="True" ShowAsUserExecutableProcess="False" InterfaceProcessID="Object.OnRunEnding" BeginStepID="2">
+    <Properties />
+    <Steps>
+      <Step Type="Execute" Name="RunEndingAddOnProcess" ID="2">
+        <Properties>
+          <Property Name="ProcessName">
+            <Value>RunEndingAddOnProcess</Value>
+          </Property>
+        </Properties>
+      </Step>
+    </Steps>
+  </Process>
+</Fragment>
